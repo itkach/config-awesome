@@ -13,7 +13,7 @@ function update_volume(widget)
    local volume = string.match(status, "(%d?%d?%d)[%%M]")
    volume = string.format("% 3d", volume or 50)
 
-   status = string.match(status, "%[(o[^%]]*)%]")
+   status = string.match(status, "%[(o[^%]]*)%]") or ""
 
    if string.find(status, "on", 1, true) then
        -- For the volume numbers
